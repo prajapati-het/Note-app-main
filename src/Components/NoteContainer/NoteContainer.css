@@ -1,0 +1,38 @@
+.note-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.note-container h2 {
+  margin-bottom: 20px;
+}
+
+.note-container_notes {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* Enable horizontal scrolling if there are too many notes */
+  gap: 10px; /* Space between notes */
+  padding: 10px;
+}
+
+.note {
+  min-width: 200px; /* Minimum width for each note */
+  flex: 0 0 auto; /* Prevent notes from shrinking */
+}
+
+.custom-scroll {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #ccc transparent; /* Firefox */
+
+  /* Webkit-based browsers */
+  &::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+  }
+}
